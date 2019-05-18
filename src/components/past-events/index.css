@@ -1,0 +1,11 @@
+.PastEvents {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  &--list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+  }
+}

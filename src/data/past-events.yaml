@@ -1,0 +1,18 @@
+- city: Naples
+  date: '2017-07-16'
+  where: Riot Studio
+  site: 2017.naples.python.pizza
+  image: naples-2017
+  nofilter: true
+
+- city: Naples
+  date: '2018-07-15'
+  where: PAN
+  site: 2018.naples.python.pizza
+  image: naples-2018
+
+- city: Berlin
+  date: '2019-02-23'
+  where: Wooga
+  site: 2019.berlin.python.pizza
+  image: berlin-2019
