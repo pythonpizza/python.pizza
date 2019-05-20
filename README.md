@@ -1,12 +1,16 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+    <img src="https://python.pizza/social-image.jpg?v=2" width="100%" />
   </a>
 </p>
+
 <h1 align="center">
-  Gatsby's default starter
+  Python Pizza
 </h1>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a12816da-77eb-44b0-950f-f72d7fa73704/deploy-status)](https://app.netlify.com/sites/eloquent-knuth-6dbbe5/deploys)
+
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
