@@ -15,7 +15,8 @@
     --container-size: 120rem;
   }
 
-  h1 {
+  h1,
+  p {
     text-align: center;
   }
 }
