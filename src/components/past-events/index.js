@@ -27,7 +27,7 @@ export default props => {
   );
 
   return (
-    <Container className="PastEvents" size="large">
+    <Container className="PastEvents" size="large" id="past-events">
       <h1>Our past events</h1>
 
       <div className="PastEvents--list">
