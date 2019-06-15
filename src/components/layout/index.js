@@ -5,6 +5,7 @@ import Footer from '../footer';
 
 import './reset.css';
 import './theme.css';
+import './fonts.css';
 import './typography.css';
 
 const Layout = ({ children }) => (

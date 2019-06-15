@@ -1,11 +1,5 @@
-- city: Naples
-  date: '2020-02-14'
-  where: Hotel Mediterraneo
-  site: naples.python.pizza
-  image: naples-2018
-
 - city: Hamburg
   date: '2019-11-09'
   where: SinnerSchrader
-  site: hamburg.python.pizza
-  image: naples-2018
+  site: https://hamburg.python.pizza
+  image: hamburg-2019

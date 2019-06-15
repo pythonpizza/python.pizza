@@ -13,35 +13,38 @@ export default props => {
           node {
             city
             where
+            site
+            date(formatString: "D MMMM YYYY")
+            image
           }
         }
       }
     }
   `);
-  console.log('allFutureEventsYaml:', events);
+
+  const event = events[0].node;
+
   return (
-    <div className="EventsSlider--wrapper">
-      <ul className="EventsSlider">
-        {events.map(({ node: event }, i) => {
-          return (
-            <li key={i} className="EventsSlider--item">
-              {event.city}
-            </li>
-          );
-        })}
-      </ul>
+    <div className="EventsSlider">
+      <div className="EventsSlider--item">{event.city}</div>
       <div className="EventsSlider--description">
         <ul>
           <li>
-            <strong>Where?</strong>
-            SinnerSchrader
+            <span>
+              <strong>Where?</strong>
+              {event.where}
+            </span>
           </li>
           <li>
-            <strong>When?</strong>
-            20 December 2018
+            <span>
+              <strong>When?</strong>
+              {event.date}
+            </span>
           </li>
           <li>
-            <a href="/">Find out more here!</a>
+            <span>
+              <a href={event.site}>Find out more here!</a>
+            </span>
           </li>
         </ul>
       </div>

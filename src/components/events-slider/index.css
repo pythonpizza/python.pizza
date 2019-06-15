@@ -1,35 +1,42 @@
 .EventsSlider {
-  &--wrapper {
-    width: 100%;
-    margin: auto;
-    z-index: 10;
-  }
-
-  display: flex;
-  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  z-index: 1;
 
   &--item {
-    flex: 0 0 33.3333%;
-
     text-align: center;
-    font-family: var(--font-name--heading);
-    font-weight: bold;
+    font-family: var(--font-name--marana);
     color: var(--white);
-    opacity: 0.3;
+    opacity: 1;
+    font-size: 9.4rem;
+    letter-spacing: -0.079em;
     cursor: pointer;
-
-    &.active {
-      opacity: 1;
-    }
   }
 
   &--description {
-    margin-top: 5rem;
+    margin-top: 2rem;
     text-align: center;
+
+    transform: translateZ(0);
 
     li,
     a {
       color: var(--white);
+    }
+
+    li {
+      overflow: hidden;
+
+      span {
+        display: inline-block;
+        transition: transform 0.25s;
+      }
+    }
+
+    &.out {
+      li span {
+        transform: translateY(-100%) translateZ(0);
+      }
     }
   }
 }

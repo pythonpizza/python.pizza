@@ -3,12 +3,24 @@ import React from 'react';
 import Container from '../container';
 import Form from '../form';
 
+import './index.css';
+
 export default props => {
   return (
-    <Container size="medium">
+    <Container className="ContactUs" size="medium">
       <h1>Contact us</h1>
-      <p>If you would like to organize a Python Pizza, get in touch!</p>
       <Container size="small">
+        <p>
+          If you like{' '}
+          <span role="img" aria-label="pizza">
+            🍕
+          </span>{' '}
+          and{' '}
+          <span role="img" aria-label="python">
+            🐍
+          </span>
+          , get in touch! We are always looking for new places!
+        </p>
         <Form />
       </Container>
     </Container>

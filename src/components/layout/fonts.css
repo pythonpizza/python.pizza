@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Marana';
+  src: url('../../fonts/Marana Black.woff2') format('woff2'),
+    url('../../fonts/Marana Black.woff') format('woff'),
+    url('../../fonts/Marana Black.otf') format('opentype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Marana';
+  src: url('../../fonts/Marana Regular.woff2') format('woff2'),
+    url('../../fonts/Marana Regular.woff') format('woff'),
+    url('../../fonts/Marana Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+}

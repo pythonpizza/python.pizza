@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import classnames from 'classnames';
 
 import './index.css';
 
@@ -45,48 +46,70 @@ export default props => {
 
   return (
     <form onSubmit={onSubmit} className="Form" name="contact">
-      <label>
-        <span>Your name</span>
-        <input
-          required
-          onChange={onChangeName}
-          value={name}
-          type="text"
-          name="name"
-        />
-      </label>
-      <label>
-        <span>Your Email</span>
-        <input
-          required
-          onChange={onChangeEmail}
-          value={email}
-          type="email"
-          name="email"
-        />
-      </label>
-      <label>
-        <span>City</span>
-        <input
-          required
-          onChange={onChangeCity}
-          value={city}
-          type="text"
-          name="city"
-        />
-      </label>
-      <label>
-        <span>Your message</span>
-        <textarea
-          required
-          onChange={onChangeMessage}
-          value={message}
-          name="email"
-        />
-      </label>
+      <Input
+        component="input"
+        type="name"
+        value={name}
+        onChange={onChangeName}
+        required
+        label="Name"
+      />
+
+      <Input
+        component="input"
+        type="email"
+        value={email}
+        onChange={onChangeEmail}
+        required
+        label="Email"
+      />
+
+      <Input
+        component="input"
+        type="text"
+        value={city}
+        onChange={onChangeCity}
+        required
+        label="City"
+      />
+
+      <Input
+        component="textarea"
+        value={message}
+        onChange={onChangeMessage}
+        label="Messge"
+      />
+
       <div className="Form--submit-container">
         <button type="submit">Send</button>
       </div>
     </form>
+  );
+};
+
+const Input = props => {
+  const { component, label, className, ...others } = props;
+  let input;
+
+  switch (component) {
+    case 'input':
+      input = <input {...others} />;
+      break;
+    case 'textarea':
+      input = <textarea {...others} />;
+      break;
+    default:
+      throw new Error('Ops');
+  }
+
+  const classes = classnames(className, {
+    'has-input': props.value.length > 0,
+  });
+
+  return (
+    <label className={classes}>
+      {input}
+      <span>{label}</span>
+    </label>
   );
 };

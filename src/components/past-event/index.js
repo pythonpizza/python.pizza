@@ -14,7 +14,7 @@ export default props => {
 
   return (
     <a
-      href={`https://${site}?ref=python.pizza`}
+      href={`${site}?ref=python.pizza`}
       className={classes}
       rel="noopener noreferrer"
       target="_blank"
