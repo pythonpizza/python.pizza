@@ -1,7 +1,9 @@
 .Form {
+  --input-label-active-position: 1.3rem;
+
   label {
     display: block;
-    margin-top: 1rem;
+    margin: 3rem 0;
     font-family: var(--font-name--paragraph);
 
     &:after {
@@ -11,20 +13,22 @@
 
       width: 100%;
       height: 1px;
-      background: #ccc;
+      background: #e8e8e8;
+
+      margin-top: -1rem;
     }
   }
 
   input:focus,
   textarea:focus {
     ~ span {
-      transform: translateY(0);
+      transform: translateY(var(--input-label-active-position));
     }
   }
 
   label.has-input {
     span {
-      transform: translateY(0);
+      transform: translateY(var(--input-label-active-position));
     }
   }
 
@@ -35,7 +39,7 @@
     font-weight: bold;
     font-size: 1.2rem;
 
-    transform: translateY(-1rem);
+    transform: translateY(-1.5rem);
     transition: transform 0.3s;
   }
 
