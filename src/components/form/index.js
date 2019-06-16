@@ -14,6 +14,7 @@ export default props => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [city, setCity] = useState('');
+  const [feedbackMessage, setFeedbackMessage] = useState('');
 
   const onChangeName = useCallback(e => setName(e.target.value), []);
   const onChangeEmail = useCallback(e => setEmail(e.target.value), []);
@@ -38,11 +39,14 @@ export default props => {
         });
 
         console.log('response', response);
+
+        setFeedbackMessage('Thank you!');
       } catch (e) {
-        console.error('error');
+        console.error('error', e);
+        setFeedbackMessage('Unable to send the message, please try again');
       }
     },
-    [name, email]
+    [name, email, city, message]
   );
 
   return (
@@ -85,6 +89,8 @@ export default props => {
       <div className="Form--submit-container">
         <button type="submit">Send</button>
       </div>
+
+      {feedbackMessage && <p>{feedbackMessage}</p>}
     </form>
   );
 };

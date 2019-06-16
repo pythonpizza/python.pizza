@@ -53,6 +53,10 @@
   textarea {
     display: block;
     width: 100%;
+
+    font-family: var(--font-name--paragraph);
+    font-size: 1.7rem;
+
     margin-top: 0.2rem;
     border: 0;
     outline: none;
