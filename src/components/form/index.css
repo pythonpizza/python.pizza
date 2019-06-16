@@ -84,7 +84,8 @@
       appearance: none;
       transition: opacity 0.3s;
 
-      &:hover {
+      &:hover,
+      &:focus {
         opacity: 0.8;
       }
     }

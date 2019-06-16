@@ -27,27 +27,14 @@ export default props => {
   return (
     <div className="EventsSlider">
       <div className="EventsSlider--item">{event.city}</div>
-      <div className="EventsSlider--description">
-        <ul>
-          <li>
-            <span>
-              <strong>Where?</strong>
-              {event.where}
-            </span>
-          </li>
-          <li>
-            <span>
-              <strong>When?</strong>
-              {event.date}
-            </span>
-          </li>
-          <li>
-            <span>
-              <a href={event.site}>Find out more here!</a>
-            </span>
-          </li>
-        </ul>
-      </div>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href={event.site}
+        className="EventsSlider--description"
+      >
+        See you in <span>{event.city}</span> the <span>{event.date}</span>!
+      </a>
     </div>
   );
 };

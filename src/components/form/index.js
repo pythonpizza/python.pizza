@@ -19,6 +19,7 @@ export default props => {
   const onChangeEmail = useCallback(e => setEmail(e.target.value), []);
   const onChangeMessage = useCallback(e => setMessage(e.target.value), []);
   const onChangeCity = useCallback(e => setCity(e.target.value), []);
+
   const onSubmit = useCallback(
     async e => {
       e.preventDefault();
@@ -52,7 +53,7 @@ export default props => {
         value={name}
         onChange={onChangeName}
         required
-        label="Name"
+        label="Name*"
       />
 
       <Input
@@ -61,7 +62,7 @@ export default props => {
         value={email}
         onChange={onChangeEmail}
         required
-        label="Email"
+        label="Email*"
       />
 
       <Input
@@ -70,14 +71,15 @@ export default props => {
         value={city}
         onChange={onChangeCity}
         required
-        label="City"
+        label="City*"
       />
 
       <Input
+        required
         component="textarea"
         value={message}
         onChange={onChangeMessage}
-        label="Messge"
+        label="Messge*"
       />
 
       <div className="Form--submit-container">

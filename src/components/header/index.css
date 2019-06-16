@@ -40,12 +40,12 @@
     }
 
     li {
-      font-family: var(--font-name--paragraph);
       font-weight: 700;
 
       a {
         display: block;
         padding: 0.4rem;
+        font-family: var(--font-name--paragraph);
         color: var(--white);
         user-select: none;
         background: linear-gradient(
