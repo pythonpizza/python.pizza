@@ -6,6 +6,7 @@
     display: block;
     margin: 3rem 0;
     font-family: var(--font-name--paragraph);
+    cursor: text;
 
     &:after {
       content: '';
@@ -45,7 +46,7 @@
     transform: translateY(-1.5rem);
     transform-origin: left;
 
-    transition: transform 0.3s;
+    transition: transform 0.2s;
   }
 
   input,
