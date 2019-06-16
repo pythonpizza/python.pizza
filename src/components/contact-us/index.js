@@ -18,7 +18,7 @@ export default props => {
         <span role="img" aria-label="python">
           🐍
         </span>
-        , get in touch! We are always looking for new places!
+        , get in touch to organise a Python Pizza!
       </p>
       <Form />
     </Container>
