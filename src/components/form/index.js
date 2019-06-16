@@ -61,6 +61,7 @@ export default props => {
       <Input
         component="input"
         type="name"
+        name="name"
         value={name}
         onChange={onChangeName}
         required
@@ -70,6 +71,7 @@ export default props => {
       <Input
         component="input"
         type="email"
+        name="email"
         value={email}
         onChange={onChangeEmail}
         required
@@ -79,6 +81,7 @@ export default props => {
       <Input
         component="input"
         type="text"
+        name="city"
         value={city}
         onChange={onChangeCity}
         required
@@ -87,6 +90,7 @@ export default props => {
 
       <Input
         required
+        name="message"
         component="textarea"
         value={message}
         onChange={onChangeMessage}
