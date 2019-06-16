@@ -1,5 +1,6 @@
 .Form {
   --input-label-active-position: 1.3rem;
+  --input-label-scale: 0.8;
 
   label {
     display: block;
@@ -22,13 +23,15 @@
   input:focus,
   textarea:focus {
     ~ span {
-      transform: translateY(var(--input-label-active-position));
+      transform: translateY(var(--input-label-active-position))
+        scale(var(--input-label-scale));
     }
   }
 
   label.has-input {
     span {
-      transform: translateY(var(--input-label-active-position));
+      transform: translateY(var(--input-label-active-position))
+        scale(var(--input-label-scale));
     }
   }
 
@@ -40,6 +43,8 @@
     font-size: 1.2rem;
 
     transform: translateY(-1.5rem);
+    transform-origin: left;
+
     transition: transform 0.3s;
   }
 
@@ -49,6 +54,7 @@
     width: 100%;
     margin-top: 0.2rem;
     border: 0;
+    outline: none;
   }
 
   textarea {
@@ -78,7 +84,7 @@
       transition: opacity 0.3s;
 
       &:hover {
-        opacity: 0.7;
+        opacity: 0.8;
       }
     }
   }
