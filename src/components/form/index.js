@@ -50,7 +50,14 @@ export default props => {
   );
 
   return (
-    <form onSubmit={onSubmit} className="Form" name="contact">
+    <form
+      data-netlify="true"
+      onSubmit={onSubmit}
+      className="Form"
+      name="contact"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+
       <Input
         component="input"
         type="name"
