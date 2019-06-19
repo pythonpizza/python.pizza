@@ -38,7 +38,7 @@
 
     transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 
-    &:before {
+    /* &:before {
       content: '';
       position: absolute;
       top: 0;
@@ -52,14 +52,14 @@
         opacity: 1;
         mix-blend-mode: hard-light;
       }
-    }
+    }*/
   }
 
-  &--no-filter {
+  /*&--no-filter {
     .PastEvent--background {
       &:before {
         display: none;
       }
     }
-  }
+  }*/
 }
