@@ -12,6 +12,11 @@
     letter-spacing: -0.079em;
     cursor: pointer;
 
+    a {
+      color: currentColor;
+      font-size: inherit;
+    }
+
     @media (--tablet) {
       font-size: 9.4rem;
     }

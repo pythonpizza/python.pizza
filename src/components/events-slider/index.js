@@ -26,7 +26,11 @@ export default props => {
 
   return (
     <div className="EventsSlider">
-      <div className="EventsSlider--item">{event.city}</div>
+      <div className="EventsSlider--item">
+        <a target="_blank" rel="noopener noreferrer" href={event.site}>
+          {event.city}
+        </a>
+      </div>
       <a
         target="_blank"
         rel="noopener noreferrer"
