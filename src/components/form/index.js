@@ -84,8 +84,7 @@ export default props => {
         name="city"
         value={city}
         onChange={onChangeCity}
-        required
-        label="City*"
+        label="City"
       />
 
       <Input
