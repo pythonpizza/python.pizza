@@ -17,6 +17,11 @@
     }
   }
 
+  &--primary {
+    position: static;
+    background: var(--primary-color);
+  }
+
   &--logo {
     width: 10rem;
     height: 10rem;

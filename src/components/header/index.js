@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link, navigate } from 'gatsby';
+import classnames from 'classnames';
 
 import Container from '../container';
 import Logo from '../logo';
@@ -6,11 +8,21 @@ import Logo from '../logo';
 import './index.css';
 
 export default class Header extends Component {
-  onNavClick(e) {
+  static defaultProps = {
+    variant: 'transparent',
+  };
+
+  onNavClick = e => {
     e.preventDefault();
 
     const target = e.target;
     const destinationId = target.getAttribute('data-destination');
+
+    if (this.props.variant === 'primary') {
+      navigate(`/#${destinationId}`);
+      return;
+    }
+
     const destinationDom = window.document.querySelector(`#${destinationId}`);
 
     if (!destinationDom) {
@@ -21,13 +33,21 @@ export default class Header extends Component {
       top: destinationDom.offsetTop,
       behavior: 'smooth',
     });
-  }
+  };
 
   render() {
+    const { variant } = this.props;
+
     return (
-      <div className="Header">
+      <div
+        className={classnames('Header', {
+          'Header--primary': variant === 'primary',
+        })}
+      >
         <Container size="large">
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
           <ul className="Header--links">
             <li>
               <a
