@@ -16,3 +16,9 @@
   where: Wooga
   site: https://2019.berlin.python.pizza
   image: berlin-2019
+
+- city: Berlin Night
+  date: '2019-08-23'
+  where: Wooga
+  site: https://night.berlin.python.pizza/
+  image: berlin-night
