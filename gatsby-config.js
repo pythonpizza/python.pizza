@@ -28,12 +28,6 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: 'gatsby-plugin-favicon',
-      options: {
-        logo: './src/images/favicon.png',
-      },
-    },
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -42,8 +36,5 @@ module.exports = {
       },
     },
     'gatsby-plugin-postcss',
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 };
