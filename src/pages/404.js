@@ -13,7 +13,7 @@ const NotFoundPage = () => (
       <h1>Oh no :(</h1>
       <p>
         Can't find any{' '}
-        <span role="image" aria-label="pizza">
+        <span role="img" aria-label="pizza">
           🍕
         </span>{' '}
         here
