@@ -93,7 +93,7 @@ export default props => {
         component="textarea"
         value={message}
         onChange={onChangeMessage}
-        label="Messge*"
+        label="Message*"
       />
 
       <div className="Form--submit-container">
