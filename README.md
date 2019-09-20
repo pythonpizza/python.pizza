@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
+  <a href="https://python.pizza">
     <img src="https://python.pizza/social-image.jpg?v=2" width="100%" />
   </a>
 </p>
