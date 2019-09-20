@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://python.pizza">
-    <img src="https://raw.githubusercontent.com/pythonpizza/python.pizza/master/social/social-image.jpeg" width="100%" />
+    <img src="https://raw.githubusercontent.com/pythonpizza/python.pizza/master/social/social-image.jpg" width="100%" />
   </a>
 </p>
 
