@@ -12,7 +12,7 @@
     "gatsby-plugin-offline": "^3.0.9",
     "gatsby-plugin-postcss": "^2.1.10",
     "gatsby-plugin-react-helmet": "^3.1.8",
-    "gatsby-plugin-sharp": "^2.2.25",
+    "gatsby-plugin-sharp": "^2.2.27",
     "gatsby-source-filesystem": "^2.1.26",
     "gatsby-transformer-sharp": "^2.2.17",
     "gatsby-transformer-yaml": "^2.2.10",
