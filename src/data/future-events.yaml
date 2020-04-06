@@ -1,5 +1,5 @@
-- city: Hamburg
-  date: '2019-11-09'
-  where: SinnerSchrader
-  site: https://hamburg.python.pizza
-  image: hamburg-2019
+- city: Worldwide
+  date: '2020-04-25'
+  where: Online
+  site: https://remote.python.pizza
+  image: remote-2020
