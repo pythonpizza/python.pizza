@@ -22,3 +22,9 @@
   where: Wooga
   site: https://night.berlin.python.pizza/
   image: berlin-night
+
+- city: Hamburg
+  date: '2019-11-09'
+  where: SinnerSchrader
+  site: https://hamburg.python.pizza/
+  image: hamburg-2019
