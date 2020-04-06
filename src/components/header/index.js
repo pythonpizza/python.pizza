@@ -69,11 +69,11 @@ export default class Header extends Component {
             </li>
             <li>
               <a
-                href="https://hamburg.python.pizza?ref=global-header"
+                href="https://remote.python.pizza?ref=global-header"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Hamburg
+                Remote
               </a>
             </li>
           </ul>
