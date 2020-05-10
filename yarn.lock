@@ -5765,17 +5765,17 @@ gatsby-plugin-manifest@^2.2.20:
     semver "^5.7.1"
     sharp "^0.23.1"
 
-gatsby-plugin-offline@^3.0.13:
-  version "3.0.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.0.13.tgz#265a9b06aee83451740b0a52cb73f42b8cf636bc"
-  integrity sha512-VAjVAArWTJy1Fj/2o+Myd4FZxlU89O5Lm9PAopg78I+xSSEfDVF6lKs5e/KaSY24gKl8HNZPeIJESdUs7/7dRw==
+gatsby-plugin-offline@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.2.1.tgz#67d04c9915e9852544fbc935c4751b578cae88bf"
+  integrity sha512-b2JZJrp7Xq2XY2/vmP+MviDq0nr07fAsqhAz5ApI0G11yEsyqCwEKLDYKsHuZ4rgM7p69wncQNa/WpluCWUUsw==
   dependencies:
-    "@babel/runtime" "^7.6.3"
+    "@babel/runtime" "^7.9.6"
     cheerio "^1.0.0-rc.3"
-    glob "^7.1.4"
+    gatsby-core-utils "^1.2.1"
+    glob "^7.1.6"
     idb-keyval "^3.2.0"
     lodash "^4.17.15"
-    slash "^3.0.0"
     workbox-build "^4.3.1"
 
 gatsby-plugin-page-creator@^2.3.1:
@@ -10555,11 +10555,6 @@ prepend-http@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
-
-prettier@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.5.tgz#d6d56282455243f2f92cc1716692c08aa31522d4"
-  integrity sha512-7PtVymN48hGcO4fGjybyBSIWDsLU4H4XlvOHfq91pz9kkGlonzwTfYkaIEwiRg/dAJF9YlbsduBAgtYLi+8cFg==
 
 prettier@^2.0.5:
   version "2.0.5"
