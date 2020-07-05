@@ -1,29 +1,36 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import classnames from 'classnames';
+import { useFormState } from 'react-use-form-state';
 
 import './index.css';
 
-const encode = data => {
+const encode = (data) => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 };
 
-export default props => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [city, setCity] = useState('');
+export default (props) => {
+  const [formState, { text, email, textarea }] = useFormState();
   const [feedbackMessage, setFeedbackMessage] = useState('');
-
-  const onChangeName = useCallback(e => setName(e.target.value), []);
-  const onChangeEmail = useCallback(e => setEmail(e.target.value), []);
-  const onChangeMessage = useCallback(e => setMessage(e.target.value), []);
-  const onChangeCity = useCallback(e => setCity(e.target.value), []);
+  const [sendingMessage, setSendingMessage] = useState(false);
+  const formRef = useRef();
 
   const onSubmit = useCallback(
-    async e => {
+    async (e) => {
       e.preventDefault();
+
+      if (!isFormValid(formState)) {
+        setFeedbackMessage('Please complete all required fields');
+        return;
+      }
+
+      if (sendingMessage) {
+        return;
+      }
+
+      setFeedbackMessage('Sending your message now 🚀');
+      setSendingMessage(true);
 
       try {
         const response = await fetch('/', {
@@ -31,22 +38,28 @@ export default props => {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: encode({
             'form-name': 'contact',
-            name,
-            email,
-            city,
-            message,
+            name: formState.values.name,
+            email: formState.values.email,
+            city: formState.values.city,
+            message: formState.values.message,
           }),
         });
 
-        console.log('response', response);
+        if (response.status !== 200) {
+          throw new Error('unable to send message');
+        }
 
         setFeedbackMessage('Thank you!');
+        formState.clear();
+        formRef.current.reset();
       } catch (e) {
         console.error('error', e);
         setFeedbackMessage('Unable to send the message, please try again');
+      } finally {
+        setSendingMessage(false);
       }
     },
-    [name, email, city, message]
+    [formState.values, sendingMessage]
   );
 
   return (
@@ -55,69 +68,46 @@ export default props => {
       onSubmit={onSubmit}
       className="Form"
       name="contact"
+      ref={formRef}
     >
       <input type="hidden" name="form-name" value="contact" />
 
-      <Input
-        component="input"
-        type="name"
-        name="name"
-        value={name}
-        onChange={onChangeName}
-        required
-        label="Name*"
-      />
+      <Input {...text('name')} required label="Name*" />
 
-      <Input
-        component="input"
-        type="email"
-        name="email"
-        value={email}
-        onChange={onChangeEmail}
-        required
-        label="Email*"
-      />
+      <Input {...email('email')} required label="Email*" />
 
-      <Input
-        component="input"
-        type="text"
-        name="city"
-        value={city}
-        onChange={onChangeCity}
-        label="City"
-      />
+      <Input {...text('city')} label="City" />
 
-      <Input
-        required
-        name="message"
-        component="textarea"
-        value={message}
-        onChange={onChangeMessage}
-        label="Message*"
-      />
+      <Input {...textarea('message')} type="textarea" label="Message*" />
+
+      {feedbackMessage && (
+        <p className="Form--feedback-message">{feedbackMessage}</p>
+      )}
 
       <div className="Form--submit-container">
-        <button type="submit">Send</button>
+        <button disabled={sendingMessage} type="submit">
+          Send
+        </button>
       </div>
-
-      {feedbackMessage && <p>{feedbackMessage}</p>}
     </form>
   );
 };
 
-const Input = props => {
-  const { component, label, className, ...others } = props;
+const Input = (props) => {
+  const { type, label, className, ...others } = props;
   let input;
 
-  switch (component) {
+  switch (type) {
+    case 'text':
+    case 'email':
     case 'input':
-      input = <input {...others} />;
+      input = <input type={type} {...others} />;
       break;
     case 'textarea':
-      input = <textarea {...others} />;
+      input = <textarea type={type} {...others} />;
       break;
     default:
-      throw new Error('Ops');
+      throw new Error(`Ops: ${type}`);
   }
 
   const classes = classnames(className, {
@@ -131,3 +121,8 @@ const Input = props => {
     </label>
   );
 };
+
+const isFormValid = (formState) =>
+  formState.validity.name &&
+  formState.validity.email &&
+  formState.validity.message;
