@@ -28,3 +28,9 @@
   where: SinnerSchrader
   site: https://hamburg.python.pizza/
   image: hamburg-2019
+
+- city: Remote
+  date: '2020-04-25'
+  where: Online
+  site: https://remote.python.pizza
+  image: remote-2020
