@@ -34,3 +34,10 @@
   where: Online
   site: https://remote.python.pizza
   image: remote-2020
+
+- city: Holguín
+  date: '2020-11-14'
+  where: Holguín Cuba
+  site: https://holguin.python.pizza/
+  image: holguin-2020
+ 
