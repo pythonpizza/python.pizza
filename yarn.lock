@@ -11155,10 +11155,10 @@ react-side-effect@^1.1.0:
   dependencies:
     shallowequal "^1.0.1"
 
-react-use-form-state@^0.13.1:
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/react-use-form-state/-/react-use-form-state-0.13.1.tgz#891e678cf6248e4668bfffc1112833c2d98a2e82"
-  integrity sha512-h0b+KFykqihTpjHKOi8fKZ3aaFqZofkAMof4K2rkCgC8FaU7JnkjzCAPv9lVJjDuf9AAmFHFM1PPMzPtzdwY3Q==
+react-use-form-state@^0.13.2:
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/react-use-form-state/-/react-use-form-state-0.13.2.tgz#907327a2479b07e51fe4f58df93fc19767cf6261"
+  integrity sha512-bP2H5V6bBFZCJIrbpUcahvJX/f5rGueOvIjg818sq3wg0aX6BFz70u81yhaSg2aCZq0aF3R8eMc2MRWIjr5yhw==
 
 react@^16.13.1, react@^16.8.0:
   version "16.13.1"
