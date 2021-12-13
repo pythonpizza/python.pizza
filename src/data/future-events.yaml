@@ -1,5 +1,5 @@
-- city: Hamburg
-  date: '2021-12-11'
-  where: Online
-  site: https://hamburg.python.pizza/
-  image: hamburg-2019
+- city: Holguín
+  date: '2022-01-15'
+  where: Holguín, Cuba
+  site: https://holguin.python.pizza/
+  image: holguin-2020
