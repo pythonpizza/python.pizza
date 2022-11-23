@@ -25,7 +25,7 @@
     "react-use-form-state": "^0.13.1"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.8.0"
   },
   "license": "MIT",
   "scripts": {
