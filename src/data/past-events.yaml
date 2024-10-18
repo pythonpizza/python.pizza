@@ -40,4 +40,9 @@
   where: Holguín Cuba
   site: https://holguin.python.pizza/
   image: holguin-2020
- 
+
+- city: Prague
+  date: '2024-02-24'
+  where: "Apify office, Lucerna Palace"
+  site: https://prague.python.pizza/
+  image: prague-2024
