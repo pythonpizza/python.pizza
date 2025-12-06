@@ -1,5 +1,5 @@
-- city: Brno
-  date: '2025-02-22'
-  where: "Clubco Brno, Vlněna 5"
-  site: https://brno.python.pizza/
-  image: brno-2025
+- city: Ostrava
+  date: '2026-02-21'
+  where: "Impact Hub Ostrava, Sokolská tř. 1263/24"
+  site: https://ostrava.python.pizza/
+  image: ostrava-2026
