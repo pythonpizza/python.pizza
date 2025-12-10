@@ -37,7 +37,7 @@ export default props => {
         href={event.site}
         className="EventsSlider--description"
       >
-        See you in <span>{event.city}</span> the <span>{event.date}</span>!
+        See you in <span>{event.city}</span> on <span>{event.date}</span>!
       </a>
     </div>
   );
