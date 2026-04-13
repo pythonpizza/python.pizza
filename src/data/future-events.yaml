@@ -1,5 +1,5 @@
-- city: Ostrava
-  date: '2026-02-21'
-  where: "Impact Hub Ostrava, Sokolská tř. 1263/24"
-  site: https://ostrava.python.pizza/
-  image: ostrava-2026
+- city: Warsaw
+  date: '2026-05-09'
+  where: 'PJAIT building A, Koszykowa 86, Warsaw, Poland'
+  site: https://warsaw.python.pizza/
+  image: warsaw-2026.png
