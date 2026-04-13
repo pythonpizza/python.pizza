@@ -2,53 +2,59 @@
   date: '2017-07-16'
   where: Riot Studio
   site: https://2017.naples.python.pizza
-  image: naples-2017
+  image: naples-2017.jpg
   nofilter: true
 
 - city: Naples
   date: '2018-07-15'
   where: PAN
   site: https://2018.naples.python.pizza
-  image: naples-2018
+  image: naples-2018.jpg
 
 - city: Berlin
   date: '2019-02-23'
   where: Wooga
   site: https://2019.berlin.python.pizza
-  image: berlin-2019
+  image: berlin-2019.jpg
 
 - city: Berlin Night
   date: '2019-08-23'
   where: Wooga
   site: https://night.berlin.python.pizza/
-  image: berlin-night
+  image: berlin-night.jpg
 
 - city: Hamburg
   date: '2019-11-09'
   where: SinnerSchrader
   site: https://2019.hamburg.python.pizza/
-  image: hamburg-2019
+  image: hamburg-2019.jpg
 
 - city: Remote
   date: '2020-04-25'
   where: Online
   site: https://remote.python.pizza
-  image: remote-2020
+  image: remote-2020.jpg
 
 - city: Holguín
   date: '2020-11-14'
   where: Holguín Cuba
   site: https://holguin.python.pizza/
-  image: holguin-2020
+  image: holguin-2020.jpg
 
 - city: Prague
   date: '2024-02-24'
-  where: "Apify office, Lucerna Palace"
+  where: 'Apify office, Lucerna Palace'
   site: https://prague.python.pizza/
-  image: prague-2024
+  image: prague-2024.jpg
 
 - city: Brno
   date: '2025-02-22'
-  where: "Clubco Brno, Vlněna 5"
+  where: 'Clubco Brno, Vlněna 5'
   site: https://brno.python.pizza/
-  image: brno-2025
+  image: brno-2025.jpg
+
+- city: Ostrava
+  date: '2026-02-21'
+  where: 'Impact Hub Ostrava, Sokolská tř. 1263/24'
+  site: https://ostrava.python.pizza/
+  image: ostrava-2026.jpg

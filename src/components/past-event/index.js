@@ -22,7 +22,7 @@ export default props => {
     >
       <div
         style={{
-          backgroundImage: `url(${require(`../../images/events/${image}.jpg`)})`,
+          backgroundImage: `url(${require(`../../images/events/${image}`)})`,
         }}
         className="PastEvent--background"
       />
