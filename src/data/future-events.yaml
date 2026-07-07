@@ -1,5 +1,5 @@
-- city: Warsaw
-  date: '2026-05-09'
-  where: 'PJAIT building A, Koszykowa 86, Warsaw, Poland'
-  site: https://warsaw.python.pizza/
-  image: warsaw-2026.png
+- city: Istanbul
+  date: '2026-11'
+  where: 'TBA, Istanbul, Turkey'
+  site: https://istanbul.python.pizza/
+  image: istanbul-2026.jpg

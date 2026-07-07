@@ -3,6 +3,32 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import './index.css';
 
+const MONTHS = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
+const formatDate = date => {
+  const match = date.match(/^(\d{4})-(\d{2})(?:-(\d{2}))?$/);
+
+  if (!match) return date;
+
+  const [, year, month, day] = match;
+  const monthName = MONTHS[Number(month) - 1];
+
+  return day ? `${Number(day)} ${monthName} ${year}` : `${monthName} ${year}`;
+};
+
 export default props => {
   const {
     allFutureEventsYaml: { edges: events },
@@ -14,7 +40,7 @@ export default props => {
             city
             where
             site
-            date(formatString: "D MMMM YYYY")
+            date
             image
           }
         }
@@ -37,7 +63,7 @@ export default props => {
         href={event.site}
         className="EventsSlider--description"
       >
-        See you in <span>{event.city}</span> on <span>{event.date}</span>!
+        See you in <span>{event.city}</span> on <span>{formatDate(event.date)}</span>!
       </a>
     </div>
   );
